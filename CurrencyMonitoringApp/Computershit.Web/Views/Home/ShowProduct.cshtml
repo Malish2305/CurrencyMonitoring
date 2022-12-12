@@ -1,0 +1,33 @@
+﻿@using Computershit.Core.Models
+@using Computershit.Core.Models.Enums
+@model Product
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Albums</h2>
+
+
+<body>
+    <div>
+        <h3>@Model.ProductBrand</h3>
+        <table>
+            <tr><td><p>Название продукта</p></td>
+                <td><p>Производитель</p></td>
+                <td><p>Модель</p></td><td></td>
+                <td><p>Цена</p></td><td><td></td>
+            </tr>
+            <tr>
+                <td><p>@Model.ProductType</p></td>
+                <td><p>@Model.ProductBrand</p></td>
+                <td><p>@Model.ProductModel @Model.ProductSerialNumber</p></td>
+                <td><p>@Model.Price</p></td>
+                <td><p><a href="/Home/Buy/@Model.ProductId">Купить</a></p></td>
+            </tr>
+        </table>
+        @foreach(var value in Model.ProductInfo){
+                   @value.Property  @value.ProductInfoValue<br>
+                }
+    </div>
+</body>

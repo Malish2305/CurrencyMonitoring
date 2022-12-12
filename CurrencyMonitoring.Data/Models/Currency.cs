@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CurrencyMonitoring_CM_.Models
+namespace CurrencyMonitoring.Data.Models
 {
     public class Currency
     {
@@ -13,9 +13,10 @@ namespace CurrencyMonitoring_CM_.Models
         public string CurrencySymbol { get; set; }
         public decimal Price { get; set; }
         public decimal Capitalisation { get; set; }
-        public string TokenAdress { get; set; }
-        public string Category { get; set; }
-        public virtual IEnumerable<ChangesAccordingToTime> Delta { get; set; }
+        public string? TokenAdress { get; set; }
+        public decimal TotalSupply { get; set; }
+        public int Rank { get; set; }
+        public virtual ICollection<ChangesAccordingToTime> Delta { get; set; }
         public DateTime LastUpdate { get; set; }
 
         public Currency()

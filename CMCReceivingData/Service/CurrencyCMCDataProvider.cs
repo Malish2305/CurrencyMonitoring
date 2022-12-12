@@ -30,7 +30,7 @@ namespace CMCReceivingData.Service
                 }
                 catch (WebException e)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine(e.Message); 
                 }
             }
         }

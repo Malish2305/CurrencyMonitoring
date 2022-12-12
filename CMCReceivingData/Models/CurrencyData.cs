@@ -28,7 +28,7 @@ namespace CMCReceivingData.Models
         [JsonPropertyName("circulating_supply")]
         public float CirculatingSupply { get; set; }
         [JsonPropertyName("total_supply")]
-        public float TotalSupply { get; set; }
+        public decimal TotalSupply { get; set; }
         [JsonPropertyName("platform")]
         public Platform Platform { get; set; }
         [JsonPropertyName("cmc_rank")]
